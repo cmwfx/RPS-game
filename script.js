@@ -17,7 +17,50 @@ let computerSelection = () => {
 	}
 };
 
-//let playerSelection = prompt("What is your choice");
+let playerSelection;
+const rock = document.querySelector(".rock-choice");
+const paper = document.querySelector(".paper-choice");
+const scissors = document.querySelector(".scissors-choice");
+let humanScore = document.querySelector(".human-score");
+let computerScore = document.querySelector(".computer-score");
+let drawScore = document.querySelector(".draw-score");
+let gamePlayed = 0;
+
+rock.addEventListener("click", () => {
+	playerSelection = "rock";
+	gamePlayed = playGame(playerSelection, computerSelection());
+	if (gamePlayed.includes("Win")) {
+		humanScore.textContent = parseInt(humanScore.textContent) + 1;
+	} else if (gamePlayed.includes("Lose")) {
+		computerScore.textContent = parseInt(computerScore.textContent) + 1;
+	} else if (gamePlayed.includes("Tie")) {
+		drawScore.textContent = parseInt(drawScore.textContent) + 1;
+	}
+});
+
+paper.addEventListener("click", () => {
+	playerSelection = "paper";
+	gamePlayed = playGame(playerSelection, computerSelection());
+	if (gamePlayed.includes("Win")) {
+		humanScore.textContent = parseInt(humanScore.textContent) + 1;
+	} else if (gamePlayed.includes("Lose")) {
+		computerScore.textContent = parseInt(computerScore.textContent) + 1;
+	} else if (gamePlayed.includes("Tie")) {
+		drawScore.textContent = parseInt(drawScore.textContent) + 1;
+	}
+});
+
+scissors.addEventListener("click", () => {
+	playerSelection = "scissors";
+	gamePlayed = playGame(playerSelection, computerSelection());
+	if (gamePlayed.includes("Win")) {
+		humanScore.textContent = parseInt(humanScore.textContent) + 1;
+	} else if (gamePlayed.includes("Lose")) {
+		computerScore.textContent = parseInt(computerScore.textContent) + 1;
+	} else if (gamePlayed.includes("Tie")) {
+		drawScore.textContent = parseInt(drawScore.textContent) + 1;
+	}
+});
 
 //p1 = human
 //p2 = computer

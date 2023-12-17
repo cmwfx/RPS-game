@@ -14,7 +14,8 @@ body {
 	justify-content: space-between;
 }
 .human,
-.computer {
+.computer,
+.DRAW {
 	padding-top: 24px;
 	text-align: center;
 }
@@ -27,7 +28,7 @@ body {
 	padding-left: 120px;
 }
 .computer {
-	padding-right: 265px;
+	padding-right: 120px;
 }
 .move-img {
 	display: flex;
@@ -59,4 +60,5 @@ body {
 .paper-choice,
 .scissors-choice {
 	margin: 0;
+	cursor: pointer;
 }
