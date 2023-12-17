@@ -1,0 +1,62 @@
+body {
+	font-family: "Inter", sans-serif;
+	margin: 0;
+}
+.container {
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+}
+.players {
+	display: flex;
+	justify-content: space-between;
+}
+.human,
+.computer {
+	padding-top: 24px;
+	text-align: center;
+}
+.player-name {
+	font-weight: bold;
+	font-size: 100px;
+	margin: 0;
+}
+.human {
+	padding-left: 120px;
+}
+.computer {
+	padding-right: 265px;
+}
+.move-img {
+	display: flex;
+	justify-content: space-between;
+	margin-top: -25vh;
+}
+.human-img {
+	width: 50%;
+}
+.moves {
+	display: flex;
+	flex-direction: column;
+	margin-top: -25vh;
+}
+.choose-option {
+	font-weight: bold;
+	font-size: 50px;
+	margin: 0;
+	margin-left: 35px;
+}
+.move-choices {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	font-weight: bold;
+	font-size: 105px;
+}
+.rock-choice,
+.paper-choice,
+.scissors-choice {
+	margin: 0;
+}

@@ -4,10 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat+Alternates:wght@500;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Rock Paper Scissors</title>
 </head>
 
 <body>
+    <div class="container">
+        <div class="players">
+            <div class="human">
+                <p class="player-name">HUMAN</p>
+                <p class="human-score">0</p>
+            </div>
+            <div class="computer">
+                <p class="player-name">AI</p>
+                <p class="computer-score">0</p>
+            </div>
+        </div>
+        <div class="move-img">
+            <div class="human-img">
+                <img src="./images/White-in-Jacket1.png" alt="human move picture" class="humanIMG">
+            </div>
+            <div class="computer-img">
+                <img src="./images/Purple-in-Jacket9.png" alt="computer move picture" class="AI-Img">
+            </div>
+        </div>
+        <div class="moves">
+            <p class="choose-option">CHOOSE ONE&darr;</p>
+            <div class="move-choices">
+                <p class="rock-choice">ROCK</p>
+                <p class="paper-choice">PAPER</p>
+                <p class="scissors-choice">SCISSORS</p>
+            </div>
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 

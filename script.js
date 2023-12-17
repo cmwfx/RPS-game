@@ -17,7 +17,7 @@ let computerSelection = () => {
 	}
 };
 
-let playerSelection = prompt("What is your choice");
+//let playerSelection = prompt("What is your choice");
 
 //p1 = human
 //p2 = computer
@@ -48,35 +48,35 @@ let playGame = (p1Selection, p2Selection) => {
 };
 
 //console.log(playGame(playerSelection, computerSelection()));
-let game = () => {
-	let i = 0;
-	let j = 0;
-	let k = 0;
-	while (i < 5 && j < 5) {
-		let playerSelection = prompt("What is your choice?");
-		let gameResult = playGame(playerSelection, computerSelection());
-		if (gameResult.includes("Win")) {
-			i++;
+// let game = () => {
+// 	let i = 0;
+// 	let j = 0;
+// 	let k = 0;
+// 	while (i < 5 && j < 5) {
+// 		let playerSelection = prompt("What is your choice?");
+// 		let gameResult = playGame(playerSelection, computerSelection());
+// 		if (gameResult.includes("Win")) {
+// 			i++;
 
-			if (i == 5) {
-				console.log(i);
-				console.log(j);
-				console.log(k);
-				return "You Win";
-			}
-		} else if (gameResult.includes("Lose")) {
-			j++;
+// 			if (i == 5) {
+// 				console.log(i);
+// 				console.log(j);
+// 				console.log(k);
+// 				return "You Win";
+// 			}
+// 		} else if (gameResult.includes("Lose")) {
+// 			j++;
 
-			if (j == 5) {
-				console.log(j);
-				console.log(i);
-				console.log(k);
-				return "Computer wins";
-			}
-		} else if (gameResult.includes("Tie")) {
-			k++;
-		}
-	}
-};
+// 			if (j == 5) {
+// 				console.log(j);
+// 				console.log(i);
+// 				console.log(k);
+// 				return "Computer wins";
+// 			}
+// 		} else if (gameResult.includes("Tie")) {
+// 			k++;
+// 		}
+// 	}
+// };
 
-console.log(game());
+// console.log(game());
