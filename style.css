@@ -4,7 +4,7 @@ body {
 }
 .container {
 	max-height: 100vh;
-	overflow: hidden;
+	overflow-x: hidden;
 	display: flex;
 	flex-direction: column;
 	overflow-y: auto;
@@ -33,7 +33,6 @@ body {
 .move-img {
 	display: flex;
 	justify-content: space-between;
-	/* margin-top: -25vh; */
 }
 .human-img {
 	width: 50%;
@@ -41,7 +40,6 @@ body {
 .moves {
 	display: flex;
 	flex-direction: column;
-	/* margin-top: -25vh; */
 }
 .choose-option {
 	font-weight: bold;

@@ -17,16 +17,24 @@ let humanScore = document.querySelector(".human-score");
 let computerScore = document.querySelector(".computer-score");
 let drawScore = document.querySelector(".draw-score");
 let gamePlayed = 0;
+let humanImage = document.querySelector(".humanIMG");
+let computerImage = document.querySelector(".AI-Img");
 
 rock.addEventListener("click", () => {
 	playerSelection = "rock";
 	gamePlayed = playGame(playerSelection, computerSelection());
 	if (gamePlayed.includes("Win")) {
 		humanScore.textContent = parseInt(humanScore.textContent) + 1;
+		humanImage.src = "./images/HUMANrock.png";
+		computerImage.src = "./images/AIscissors.png";
 	} else if (gamePlayed.includes("Lose")) {
 		computerScore.textContent = parseInt(computerScore.textContent) + 1;
+		humanImage.src = "./images/HUMANrock.png";
+		computerImage.src = "./images/AIpaper.png";
 	} else if (gamePlayed.includes("Tie")) {
 		drawScore.textContent = parseInt(drawScore.textContent) + 1;
+		humanImage.src = "./images/HUMANrock.png";
+		computerImage.src = "./images/AIrock.png";
 	}
 });
 
@@ -35,10 +43,16 @@ paper.addEventListener("click", () => {
 	gamePlayed = playGame(playerSelection, computerSelection());
 	if (gamePlayed.includes("Win")) {
 		humanScore.textContent = parseInt(humanScore.textContent) + 1;
+		humanImage.src = "./images/HUMANpaper.png";
+		computerImage.src = "./images/AIrock.png";
 	} else if (gamePlayed.includes("Lose")) {
 		computerScore.textContent = parseInt(computerScore.textContent) + 1;
+		humanImage.src = "./images/HUMANpaper.png";
+		computerImage.src = "./images/AIscissors.png";
 	} else if (gamePlayed.includes("Tie")) {
 		drawScore.textContent = parseInt(drawScore.textContent) + 1;
+		humanImage.src = "./images/HUMANpaper.png";
+		computerImage.src = "./images/AIpaper.png";
 	}
 });
 
@@ -47,18 +61,26 @@ scissors.addEventListener("click", () => {
 	gamePlayed = playGame(playerSelection, computerSelection());
 	if (gamePlayed.includes("Win")) {
 		humanScore.textContent = parseInt(humanScore.textContent) + 1;
+		humanImage.src = "./images/HUMANscissors.png";
+		computerImage.src = "./images/AIpaper.png";
 	} else if (gamePlayed.includes("Lose")) {
 		computerScore.textContent = parseInt(computerScore.textContent) + 1;
+		humanImage.src = "./images/HUMANscissors.png";
+		computerImage.src = "./images/AIrock.png";
 	} else if (gamePlayed.includes("Tie")) {
 		drawScore.textContent = parseInt(drawScore.textContent) + 1;
+		humanImage.src = "./images/HUMANscissors.png";
+		computerImage.src = "./images/AIscissors.png";
 	}
 });
 
 //p1 = human
 //p2 = computer
+let compSelection = "";
+let humanSelection = "";
 let playGame = (p1Selection, p2Selection) => {
-	let humanSelection = p1Selection.toLowerCase();
-	let compSelection = p2Selection.toLowerCase();
+	humanSelection = p1Selection.toLowerCase();
+	compSelection = p2Selection.toLowerCase();
 	if (humanSelection === compSelection) {
 		return "It's a Tie! Please make another choice.";
 	} else if (humanSelection == "rock" && compSelection == "paper") {
